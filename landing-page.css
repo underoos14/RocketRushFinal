@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Guardians";
-  src: url("../Guardians.ttf") format("truetype");
+  src: url("../mini-project/Guardians.ttf") format("truetype");
 }
 body {
   background-color: black;
