@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROCKET RUSH</title>
+    <link rel="stylesheet" href="landing-page.css" />
+  </head>
+  <body>
+    <div class="main"></div>
+
+    <!-- only used the JS bit underneath to generate the  box-shadow CSS box-shadow input.  list that layered shadow in line, let light that shine. 
+ -->
+    <script language="javascript" type="text/javascript">
+      function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      const STAR_COUNT = 1;
+      let result = "";
+      for (let i = 0; i < STAR_COUNT; i++) {
+        result += `${randomNumber(-50, 50)}vw ${randomNumber(
+          -50,
+          50
+        )}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
+      }
+      console.log(substring(0, result.length - 1));
+    </script>
+
+    <div class="flex-div">
+      <div class="game-name">
+        <div class="game-link"><a href="gameplay.html">ROCKET RUSH</a></div>
+        <div class="note">**Click on the name to play the game!</div>
+      </div>
+
+      <div class="rules-about">
+        <a class="howtoplay" href="how-to-play.html"><u>HOW TO PLAY</u></a>
+        <a class="about" href="about.html"><u>ABOUT</u></a>
+      </div>
+    </div>
+
+    <div class="signinlink">
+      <a class="howtoplay" href="signin.html">Sign-In</a>
+    </div>
+
+    <div class="signuplink">
+      <a class="howtoplay" href="sign-up.html">Sign-Up</a>
+    </div>
+  </body>
+</html>

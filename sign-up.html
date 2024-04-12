@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign-Up</title>
+    <style>
+      @font-face {
+        font-family: "Guardians";
+        src: url("../Guardians.ttf") format("truetype");
+      }
+      body {
+        background-color: black;
+      }
+      p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+      .main {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 1px;
+        width: 1px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff,
+          -20vw 49vh 0px 1px #fff, 5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0px #fff,
+          -44vw -13vh 0px 0px #fff, 46vw 41vh 0px 1px #fff,
+          -3vw -45vh 0px 1px #fff, 47vw 35vh 1px 0px #fff,
+          12vw -8vh 1px 0px #fff, -34vw 48vh 1px 1px #fff,
+          32vw 26vh 1px 1px #fff, 32vw -41vh 1px 1px #fff, 0vw 37vh 1px 1px #fff,
+          34vw -26vh 1px 0px #fff, -14vw -49vh 1px 0px #fff,
+          -12vw 45vh 0px 1px #fff, -44vw -33vh 0px 1px #fff,
+          -13vw 41vh 0px 0px #fff, -36vw -11vh 0px 1px #fff,
+          -23vw -24vh 1px 0px #fff, -38vw -27vh 0px 1px #fff,
+          16vw -19vh 0px 0px #fff, 28vw 33vh 1px 0px #fff,
+          -49vw -4vh 0px 0px #fff, 16vw 32vh 0px 1px #fff,
+          36vw -18vh 1px 0px #fff, -25vw -30vh 1px 0px #fff,
+          -23vw 24vh 0px 1px #fff, -2vw -35vh 1px 1px #fff,
+          -25vw 9vh 0px 0px #fff, -15vw -34vh 0px 0px #fff,
+          -8vw -19vh 1px 0px #fff, -20vw -20vh 1px 1px #fff,
+          42vw 50vh 0px 1px #fff, -32vw 10vh 1px 0px #fff,
+          -23vw -17vh 0px 0px #fff, 44vw 15vh 1px 0px #fff,
+          -40vw 33vh 1px 1px #fff, -43vw 8vh 0px 0px #fff,
+          -48vw -15vh 1px 1px #fff, -24vw 17vh 0px 0px #fff,
+          -31vw 50vh 1px 0px #fff, 36vw -38vh 0px 1px #fff,
+          -7vw 48vh 0px 0px #fff, 15vw -32vh 0px 0px #fff,
+          29vw -41vh 0px 0px #fff, 2vw 37vh 1px 0px #fff, 7vw -40vh 1px 1px #fff,
+          15vw 18vh 0px 0px #fff, 25vw -13vh 1px 1px #fff,
+          -46vw -12vh 1px 1px #fff, -18vw 22vh 0px 0px #fff,
+          23vw -9vh 1px 0px #fff, 50vw 12vh 0px 1px #fff, 45vw 2vh 0px 0px #fff,
+          14vw -48vh 1px 0px #fff, 23vw 43vh 0px 1px #fff,
+          -40vw 16vh 1px 1px #fff, 20vw -31vh 0px 1px #fff,
+          -17vw 44vh 1px 1px #fff, 18vw -45vh 0px 0px #fff,
+          33vw -6vh 0px 0px #fff, 0vw 7vh 0px 1px #fff, -10vw -18vh 0px 1px #fff,
+          -19vw 5vh 1px 0px #fff, 1vw 42vh 0px 0px #fff, 22vw 48vh 0px 1px #fff,
+          39vw -8vh 1px 1px #fff, -6vw -42vh 1px 0px #fff,
+          -47vw 34vh 0px 0px #fff, -46vw 19vh 0px 1px #fff,
+          -12vw -32vh 0px 0px #fff, -45vw -38vh 0px 1px #fff,
+          -28vw 18vh 1px 0px #fff, -38vw -46vh 1px 1px #fff,
+          49vw -6vh 1px 1px #fff, -28vw 18vh 1px 1px #fff,
+          10vw -24vh 0px 1px #fff, -5vw -11vh 1px 1px #fff,
+          33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff,
+          18vw 27vh 0px 1px #fff, -8vw -10vh 1px 1px #fff;
+
+        /* stars were too big with the layers above but left the code in case no one cares  -- as in, if noone's just that  one other loner who actually cares    */
+
+        box-shadow: 24vw 9vh 1px 0px #fff, 12vw -24vh 0px 1px #fff,
+          -45vw -22vh 0px 0px #fff, -37vw -40vh 0px 1px #fff,
+          29vw 19vh 0px 1px #fff, 4vw -8vh 0px 1px #fff, -5vw 21vh 1px 1px #fff,
+          -27vw 26vh 1px 1px #fff, -47vw -3vh 1px 1px #fff,
+          -28vw -30vh 0px 1px #fff, -43vw -27vh 0px 1px #fff,
+          4vw 22vh 1px 1px #fff, 36vw 23vh 0px 0px #fff, -21vw 24vh 1px 1px #fff,
+          -16vw 2vh 1px 0px #fff, -16vw -6vh 0px 0px #fff, 5vw 26vh 0px 0px #fff,
+          -34vw 41vh 0px 0px #fff, 1vw 42vh 1px 1px #fff,
+          11vw -13vh 1px 1px #fff, 48vw -8vh 1px 0px #fff,
+          22vw -15vh 0px 0px #fff, 45vw 49vh 0px 0px #fff,
+          43vw -27vh 1px 1px #fff, 20vw -2vh 0px 0px #fff, 8vw 22vh 0px 1px #fff,
+          39vw 48vh 1px 1px #fff, -21vw -11vh 0px 1px #fff,
+          -40vw 45vh 0px 1px #fff, 11vw -30vh 1px 0px #fff,
+          26vw 30vh 1px 0px #fff, 45vw -29vh 0px 1px #fff,
+          -2vw 18vh 0px 0px #fff, -29vw -45vh 1px 0px #fff,
+          -7vw -27vh 1px 1px #fff, 42vw 24vh 0px 0px #fff,
+          45vw -48vh 1px 0px #fff, -36vw -18vh 0px 0px #fff,
+          -44vw 13vh 0px 1px #fff, 36vw 16vh 0px 1px #fff,
+          40vw 24vh 0px 0px #fff, 18vw 11vh 0px 0px #fff,
+          -15vw -23vh 1px 0px #fff, -24vw 48vh 0px 1px #fff,
+          27vw -45vh 1px 0px #fff, -2vw -24vh 0px 1px #fff,
+          -15vw -28vh 0px 0px #fff, -43vw 13vh 1px 0px #fff,
+          7vw 27vh 1px 0px #fff, 47vw 5vh 0px 0px #fff, -45vw 15vh 1px 1px #fff,
+          -5vw -28vh 0px 1px #fff, 38vw 25vh 1px 1px #fff,
+          -39vw -1vh 1px 0px #fff, 5vw 0vh 1px 0px #fff, 49vw 13vh 0px 0px #fff,
+          48vw 10vh 0px 1px #fff, 19vw -28vh 0px 0px #fff, 4vw 7vh 0px 0px #fff,
+          21vw 21vh 1px 1px #fff, -15vw -15vh 0px 1px #fff,
+          -6vw -42vh 1px 0px #fff, -15vw 48vh 1px 1px #fff,
+          -23vw 25vh 1px 1px #fff, -48vw 25vh 0px 1px #fff,
+          -31vw -19vh 0px 1px #fff, 4vw 37vh 1px 1px #fff,
+          -43vw 28vh 0px 0px #fff, 3vw -25vh 0px 1px #fff,
+          -39vw 14vh 0px 1px #fff, -40vw 31vh 0px 1px #fff,
+          35vw -36vh 1px 1px #fff, 16vw 49vh 0px 0px #fff, 6vw 39vh 0px 0px #fff,
+          3vw -35vh 0px 1px #fff, -44vw -2vh 1px 0px #fff,
+          -6vw 21vh 1px 0px #fff, 48vw 9vh 1px 1px #fff, -43vw 30vh 1px 1px #fff,
+          29vw -12vh 1px 1px #fff, -48vw 13vh 1px 0px #fff,
+          -42vw 32vh 1px 1px #fff, 34vw 15vh 1px 1px #fff,
+          29vw -37vh 1px 1px #fff, 28vw 2vh 0px 0px #fff;
+        animation: zoom 16s alternate infinite;
+      }
+
+      @keyframes zoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.5);
+        }
+      }
+
+      @keyframes minmax {
+        0% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(0.8);
+        }
+      }
+
+      .form-container {
+        border-radius: 7px;
+        display: flex;
+        width: 250px;
+        height: 500px;
+        padding: 20px;
+        background-color: aqua;
+        color: black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+        font-family: "Guardians";
+        opacity: 0.7;
+      }
+      #major-form {
+        margin: 0;
+        padding: 0;
+      }
+      .head {
+        text-align: center;
+        font-size: 24px;
+      }
+      .signin {
+        margin-top: 25px;
+        font-family: "Guardians";
+        font-size: 12px;
+        border: 1px solid white;
+        border-radius: 7px;
+        padding: 5px;
+        transition: transform 0.15s;
+      }
+      .signin:active {
+        transform: scale(0.65);
+      }
+      .back-box {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 53px;
+      }
+      .back {
+        width: 50px;
+        transition: transform 0.15s;
+      }
+      .back:active {
+        transform: scale(0.65);
+      }
+      .box {
+        width: 200px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main"></div>
+
+    <!-- only used the JS bit underneath to generate the  box-shadow CSS box-shadow input.  list that layered shadow in line, let light that shine. 
+ -->
+    <script language="javascript" type="text/javascript">
+      function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      const STAR_COUNT = 1;
+      let result = "";
+      for (let i = 0; i < STAR_COUNT; i++) {
+        result += `${randomNumber(-50, 50)}vw ${randomNumber(
+          -50,
+          50
+        )}vh ${randomNumber(0, 1)}px ${randomNumber(0, 1)}px #fff,`;
+      }
+      console.log(substring(0, result.length - 1));
+
+      function validate() {
+        var form_action = document.getElementById("major-form");
+        form_action.addEventListener("submit", submitForm);
+        function submitForm(event) {
+          event.preventDefault();
+        }
+
+        var cust_name = document.getElementById("name").value.trim();
+        if (cust_name === "") {
+          const name_error = document.createElement("p");
+          name_error.innerHTML = "*PLEASE ENTER A VALID NAME";
+          name_error.style.maxWidth = "250px";
+          name_error.style.fontFamily = "Helvetica";
+          name_error.style.fontWeight = "bold";
+          name_error.style.marginBottom = "15px";
+          name_error.style.color = "red";
+          name_error.style.fontSize = "12px";
+          document.getElementById("name-error").innerHTML = "";
+          document.getElementById("name-error").appendChild(name_error);
+        }
+
+        var email = document.getElementById("email").value.trim();
+        if (email === "" || !validateEmail(email)) {
+          const email_error = document.createElement("p");
+          email_error.innerHTML = "*PLEASE ENTER A VALID EMAIL ADDRESS";
+          email_error.style.maxWidth = "250px";
+          email_error.style.fontFamily = "Helvetica";
+          email_error.style.fontWeight = "bold";
+          email_error.style.marginBottom = "15px";
+          email_error.style.color = "red";
+          email_error.style.fontSize = "12px";
+          document.getElementById("email-error").innerHTML = "";
+          document.getElementById("email-error").appendChild(email_error);
+        }
+
+        var regex = /^.{9,}$/;
+        var pass = document.getElementById("pw").value.trim();
+        if (!regex.test(pass) || pass === "") {
+          const pw_error = document.createElement("p");
+          pw_error.innerHTML =
+            "*PLEASE ENTER A PASSWORD WITH MORE THAN 8 CHARACTERS";
+          pw_error.style.maxWidth = "250px";
+          pw_error.style.fontFamily = "Helvetica";
+          pw_error.style.fontWeight = "bold";
+          pw_error.style.marginBottom = "15px";
+          pw_error.style.color = "red";
+          pw_error.style.fontSize = "12px";
+          document.getElementById("pw-error").innerHTML = "";
+          document.getElementById("pw-error").appendChild(pw_error);
+        }
+
+        var confirmPass = document.getElementById("confirm-pw").value.trim();
+        if (confirmPass !== pass) {
+          const confirm_pw_error = document.createElement("p");
+          confirm_pw_error.innerHTML = "*PASSWORDS DO NOT MATCH";
+          confirm_pw_error.style.maxWidth = "250px";
+          confirm_pw_error.style.fontFamily = "Helvetica";
+          confirm_pw_error.style.fontWeight = "bold";
+          confirm_pw_error.style.marginBottom = "15px";
+          confirm_pw_error.style.color = "red";
+          confirm_pw_error.style.fontSize = "12px";
+          document.getElementById("confirm-pw-error").innerHTML = "";
+          document
+            .getElementById("confirm-pw-error")
+            .appendChild(confirm_pw_error);
+        }
+      }
+
+      function validateEmail(email) {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        return regex.test(email);
+      }
+    </script>
+
+    <div class="form-container">
+      <form id="major-form">
+        <p class="head">Sign-Up</p>
+        <br />
+        <p style="font-size: 12px">Name:</p>
+        <input class="box" id="name" type="text" />
+        <div id="name-error"></div>
+        <p style="font-size: 12px">Email:</p>
+        <input class="box" id="email" type="email" />
+        <div id="email-error"></div>
+        <p style="font-size: 12px">Password:</p>
+        <input class="box" id="pw" type="password" />
+        <div id="pw-error"></div>
+        <p style="font-size: 12px">Re-enter Password:</p>
+        <input class="box" id="confirm-pw" type="password" />
+        <div id="confirm-pw-error"></div>
+        <input
+          class="signin"
+          type="submit"
+          value="Sign-Up"
+          onclick="validate()"
+        />
+        <br /><br />
+        <p style="font-size: 12px; font-family: Helvetica; font-weight: bold">
+          If you already have an account, <a href="signin.html">Sign In</a>
+        </p>
+        <br />
+      </form>
+    </div>
+
+    <a class="back-box" href="index.html"
+      ><img class="back" src="left-arrow.svg"
+    /></a>
+  </body>
+</html>
